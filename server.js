@@ -8,11 +8,6 @@ app.listen(PORT, () => {
     
 })
 
-
-app.get('/', (req, res) => {
-    res.send({ message: "Server is Running" })
-})
-
 app.get('/time', (req, res) => {
     if (req.headers.mysecrettoken.length) {
         return res.send(
@@ -43,7 +38,3 @@ app.use(promMid({
     collectDefaultMetrics: true,
     requestDurationBuckets: [0.1, 0.5, 1, 1.5]
 }))
-
-app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname, './build/index.html'));
-});
