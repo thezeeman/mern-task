@@ -70,18 +70,11 @@ class App extends React.Component {
     const { epoch, metrics, timeLoading, metricsLoading } = this.state
     return (
       <div>
-        {timeLoading && metricsLoading ? <div style={{ position: 'fixed', top: window.innerHeight / 2.5, left: window.innerWidth / 2.08 }}>
-          <div className="lds-ellipsis">
-            <div>
-            </div>
-            <div>
-            </div>
-            <div>
-            </div>
-            <div>
-            </div>
-          </div>
-        </div> :
+        {timeLoading && metricsLoading ? 
+          <div style={{ position: 'fixed', top: window.innerHeight / 2.5, left: window.innerWidth / 2.08 }}>
+          
+          </div> 
+          :
           <div className="main-div">
             <div className="left-div">
               {epoch}
@@ -89,7 +82,8 @@ class App extends React.Component {
             <div className="right-div">
               {metrics}
             </div>
-          </div>}
+          </div>
+        }
       </div>
     );
   }

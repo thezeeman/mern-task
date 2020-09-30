@@ -1,4 +1,4 @@
-Clone this project and run these commands
+Clone this project and run the followinging commands:
 
 ### `npm install`
-### `npm start`
+### `npm start`- this will concurrently start the front-end and the server
